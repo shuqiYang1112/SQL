@@ -1,0 +1,26 @@
+SQL statment：
+1.Login and check do we have this user
+create function checkname(userName varchar(20),passWord varchar(20))
+	returns table(
+		user_ID varchar(5),
+		user_name varchar(20),
+		password varchar(20))
+	return table
+		(select user_ID, user_name, passwork
+		from user
+		where user.user_ID = checkname.userName 
+		and user.password = checkname.passWord);
+
+2.add book
+insert into book(ISBN, Book_name, author, gener, page_num, total_num, percentage)
+	values(<book_ISBN>, <Book_name>, <book_author>, <book_gener>, <book_page_num>, <book_total_num>, <return_how_many_percentage_to_publisher>);
+
+3.delete book
+delete from book
+where ISBN = <book_ISBN>;
+
+
+
+
+
+
